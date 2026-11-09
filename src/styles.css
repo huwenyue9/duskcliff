@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #12101c;
+  --color-ink-2: #1c1830;
+  --color-cream: #f6f0e6;
+  --color-cream-dim: #c9c0b2;
+  --color-amber: #e8a317;
+  --color-amber-2: #f3c56b;
+  --color-moss: #3f9d6e;
+  --color-moss-2: #214d36;
+  --color-coral: #e25b4a;
+  --color-line: #3a3348;
+  --font-sans: "Noto Sans SC", "WenQuanYi Zen Hei", "PingFang SC", sans-serif;
+  --font-display: "ZCOOL XiaoWei", "Noto Sans SC", "WenQuanYi Zen Hei", serif;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    height: 100%;
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+.touch-pad {
+  display: none;
+}
+
+@media (pointer: coarse), (max-width: 800px) {
+  .touch-pad.is-live {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe {
+    animation: none !important;
+    transition: none !important;
+  }
+}

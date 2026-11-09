@@ -1,0 +1,19 @@
+node_modules
+.tanstack
+.vercel
+dist
+.output
+screenshots
+artifacts
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+.grok/og-pending
+.node_modules.lock
+
+# builder-only notes, not part of the game
+AGENTS.md
+.grok/skills
+.grok/references
